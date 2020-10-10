@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+  --body-font-size: 15px;
+  --font-weight-thin: 400;
+  --font-weight-regular: 500;
+  --font-weight-bold: 700;
+  --avatar-size: 32px;
+  font-family: 'Spartan';
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  background: url(images/bg-pattern-top-mobile.svg) top left no-repeat, url(images/bg-pattern-bottom-mobile.svg) bottom right no-repeat;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background: url(images/bg-pattern-top-desktop.svg) top left no-repeat, url(images/bg-pattern-bottom-desktop.svg) bottom right no-repeat;
+  }
+}
+
+main {
+  margin: 0px auto;
+  max-width: 1080px;
+  padding: 32px 0px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.page-header {
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.page-header article {
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-header {
+    display: flex;
+  }
+  .page-header article {
+    flex-grow: 1;
+    text-align: left;
+    width: 40%;
+  }
+  .page-header article:nth-child(1){
+    margin-right: 8px;
+  }
+  .page-header article:nth-child(2){
+    margin-left: 8px;
+  }
+}
+
+/* info */
+.info-title {
+  color: var(--very-dark-magenta);
+  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+}
+
+.info-title h1 {
+  margin: 16px 0px;
+}
+
+.info-subtitle {
+  color: var(--dark-grayish-magenta);
+  font-size: var(--body-font-size);
+  font-weight: var(--font-weight-thin);
+}
+
+.info-subtitle p {
+  margin: 16px 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  .info-title {
+    font-size: 48px;
+  }
+}
+
+/* ratings */
+.ratings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rating {
+  background-color: var(--light-grayish-magenta);
+  border-radius: 8px;
+  margin: 8px 0px;
+  padding: 16px;
+  align-self: flex-start;
+}
+
+.rating div {
+  margin: 8px 0px;
+}
+
+.rating-stars {
+  display: block;
+}
+
+.rating-star {
+  width: 18px;
+  height: 18px;
+}
+
+.rating-info {
+  color: var(--very-dark-magenta);
+  display: block;
+  font-size: 12px;
+  font-weight: var(--font-weight-bold);
+}
+
+@media only screen and (min-width: 768px) {
+  .rating {
+    padding: 4px 16px;
+    max-width: 400px;
+    min-width: 350px;
+  }
+
+  .rating-stars {
+    display: inline-block;
+    margin-right: 16px!important;
+  }
+
+  .rating-info {
+    display: inline-block;
+  }
+
+  .rating:nth-child(1) {
+    align-self: flex-start;
+  }
+  .rating:nth-child(2) {
+    align-self: center;
+  }
+  .rating:nth-child(3) {
+    align-self: flex-end;
+  }
+}
+
+/* comments */
+.comments {
+  box-sizing: border-box;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.comment {
+  background-color: var(--very-dark-magenta);
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin: 16px;
+  padding: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+  .comments {
+    display: flex;
+    min-height: 300px;
+  }
+  .comments .comment {
+    flex-grow: 1;
+    margin: 0 16px;
+    width: 100%;
+  }
+  .comment:nth-child(1) {
+    align-self: flex-start;
+  }
+  .comment:nth-child(2) {
+    align-self: center;
+  }
+  .comment:nth-child(3) {
+    align-self: flex-end;
+  }
+}
+
+.comment-avatar {
+  border-radius: var(--avatar-size);
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: var(--avatar-size);
+}
+
+.comment-author-nameplate {
+  display: inline-block;
+  margin-left: 16px;
+}
+
+.comment-author-nameplate p {
+  margin: 4px 0px;
+}
+
+.comment-author-name {
+  color: var(--white);
+  font-size: 12px;
+  font-weight: var(--font-weight-bold);
+}
+
+.comment-author-title {
+  color: var(--soft-pink);
+  font-size: 12px;
+}
+
+.comment-text {
+  color: var(--white);
+  font-size: var(--body-font-size);
+}
