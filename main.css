@@ -110,7 +110,7 @@ main {
   border-radius: 8px;
   margin: 8px 0px;
   padding: 16px;
-  align-self: flex-start;
+  align-self: stretch;
 }
 
 .rating div {
